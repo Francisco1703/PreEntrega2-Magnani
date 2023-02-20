@@ -74,6 +74,9 @@ function solicitarVeca() {
   let solicitante = new Solicitante(nombre, apellido, edad, dni, email);
   arraySolicitantes.push(solicitante);
   console.log(arraySolicitantes);
+  alert(
+    "A la brevedad, le mandaremos un email informandole la condicion de su veca. Gracias por confiar en CoderHouse."
+  );
 }
 
 //function para dar una veca de baja:
