@@ -1,4 +1,4 @@
-/****** Solicitantes de veca CoderHouse ******/
+/****** Solicitantes de beca CoderHouse ******/
 
 class Solicitante {
   constructor(nombre, apellido, edad, dni, email) {
@@ -53,10 +53,10 @@ console.log(arraySolicitantes);
 //Function con el menu de opciones:
 
 function menu() {
-  alert("¡Bienvenido a la solicitud de vecas de CoderHouse!");
+  alert("¡Bienvenido a la solicitud de becas de CoderHouse!");
   let opcion = parseInt(
     prompt(
-      "Ingrese el numero de la opcion que se adecúe a sus necesidades: 1) Solicitar veca  2) Dar veca de baja  3) Modificación de solicitante 4) Consulta de solicitante  5) Salir"
+      "Ingrese el numero de la opcion que se adecúe a sus necesidades: 1) Solicitar beca  2) Dar beca de baja  3) Modificación de solicitante 4) Consulta de solicitante  5) Salir"
     )
   );
   return opcion;
@@ -64,7 +64,7 @@ function menu() {
 
 //function con la opcion solicitar veca:
 
-function solicitarVeca() {
+function solicitarBeca() {
   let nombre = prompt("Ingrese su/s nombre/s: ");
   let apellido = prompt("Ingrese su apellido: ");
   let edad = parseInt(prompt("Ingrese su edad: "));
@@ -75,13 +75,13 @@ function solicitarVeca() {
   arraySolicitantes.push(solicitante);
   console.log(arraySolicitantes);
   alert(
-    "A la brevedad le informaremos sobre la condición de su veca CoderHouse"
+    "A la brevedad le informaremos sobre la condición de su beca CoderHouse"
   );
 }
 
-//function para dar una veca de baja:
+//function para dar una beca de baja:
 
-function bajaVeca() {
+function bajaBeca() {
   let dni = parseInt(prompt("Ingrese su dni: "));
   let solicitante = arraySolicitantes.find(
     (solicitante) => solicitante.dni === dni
@@ -89,7 +89,7 @@ function bajaVeca() {
   let indice = arraySolicitantes.indexOf(solicitante);
   arraySolicitantes.splice(indice, 1);
   console.log(arraySolicitantes);
-  alert("Su veca CoderHouse ya ha sido de baja");
+  alert("Su beca CoderHouse ya ha sido de baja");
 }
 
 //function para modificar los datos del solicitante:
@@ -140,10 +140,10 @@ let opcion = menu();
 
 switch (opcion) {
   case 1:
-    solicitarVeca();
+    solicitarBeca();
     break;
   case 2:
-    bajaVeca();
+    bajaBeca();
     break;
   case 3:
     modificarSolicitante();
