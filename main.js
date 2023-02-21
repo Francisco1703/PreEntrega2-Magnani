@@ -74,6 +74,9 @@ function solicitarVeca() {
   let solicitante = new Solicitante(nombre, apellido, edad, dni, email);
   arraySolicitantes.push(solicitante);
   console.log(arraySolicitantes);
+  alert(
+    "A la brevedad le informaremos sobre la condición de su veca CoderHouse"
+  );
 }
 
 //function para dar una veca de baja:
@@ -86,6 +89,7 @@ function bajaVeca() {
   let indice = arraySolicitantes.indexOf(solicitante);
   arraySolicitantes.splice(indice, 1);
   console.log(arraySolicitantes);
+  alert("Su veca CoderHouse ya ha sido de baja");
 }
 
 //function para modificar los datos del solicitante:
@@ -111,6 +115,7 @@ function modificarSolicitante() {
   );
   arraySolicitantes.splice(indice, 1, solicitantemodificado);
   console.log(arraySolicitantes);
+  alert("El solicitante ya ha sido modificado");
 }
 
 //function para consultar un solicitante:
